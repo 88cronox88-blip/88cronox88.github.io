@@ -1,88 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>carta para mi wiwix ❤️</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-            font-family: 'Georgia', serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #333;
-        }
+<meta charset="UTF-8">
+<title>Carta para ti 💗</title>
 
-        .card {
-            background: white;
-            width: 90%;
-            max-width: 600px;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-            text-align: center;
-            animation: fadeIn 2s ease-in-out;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;700&display=swap" rel="stylesheet">
 
-        h1 {
-            margin-top: 0;
-            font-size: 28px;
-            color: #e91e63;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: 'Comic Neue', cursive;
+        background: radial-gradient(circle at top, #ffd1dc, #ffb6c1, #ffc0cb);
+        overflow: hidden;
+    }
 
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            white-space: pre-line;
-        }
+    /* corazones flotando */
+    .heart {
+        position: absolute;
+        color: white;
+        font-size: 20px;
+        animation: floatUp 6s linear infinite;
+        opacity: 0.7;
+    }
 
-        .signature {
-            margin-top: 30px;
-            font-style: italic;
-        }
+    @keyframes floatUp {
+        0% { transform: translateY(100vh) scale(1); opacity: 0; }
+        50% { opacity: 1; }
+        100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    .container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
 
-        .heart {
-            font-size: 40px;
-            animation: heartbeat 1.5s infinite;
-            margin-bottom: 15px;
-        }
+    .card {
+        background: rgba(255,255,255,0.9);
+        border-radius: 25px;
+        padding: 35px;
+        max-width: 600px;
+        text-align: center;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        position: relative;
+        border: 3px solid #ff69b4;
+    }
 
-        @keyframes heartbeat {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
-        }
-    </style>
+    .kitty {
+        font-size: 60px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        color: #ff1493;
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 18px;
+        color: #444;
+        line-height: 1.6;
+        white-space: pre-line;
+    }
+
+    .signature {
+        margin-top: 20px;
+        font-weight: bold;
+        color: #ff1493;
+    }
+
+    .bow {
+        font-size: 30px;
+        position: absolute;
+        top: -15px;
+        left: 20px;
+    }
+
+    .bow2 {
+        font-size: 30px;
+        position: absolute;
+        top: -15px;
+        right: 20px;
+    }
+</style>
 </head>
+
 <body>
 
+<!-- corazones animados -->
+<script>
+for (let i = 0; i < 20; i++) {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💗";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (3 + Math.random() * 5) + "s";
+    document.body.appendChild(heart);
+}
+</script>
+
+<div class="container">
     <div class="card">
-        <div class="heart">❤️</div>
-        <h1>Para mi wiwiwix</h1>
+
+        <div class="bow">🎀</div>
+        <div class="bow2">🎀</div>
+
+        <div class="kitty">🐱💗</div>
+
+        <h1>Para el amor de mi vida</h1>
 
         <p>
-Enamorarme de ti fue lo mas facíl que nunca hice.
+Enamorarme de ti fue lo más fácil que hice.
 
-No me importa nada...Menos tú
+No me importa nada... menos tú.
 Y cada día que vivo, me doy cuenta de esto.
+
 Te amé el día que te conocí.
 Te amo hoy.
 Y te amaré el resto de mi vida.
         </p>
 
         <div class="signature">
-            Con todo mi amor,<br>
-            [Tu nombre]
+            Te quiero 💗<br>
+            Tu winino 
         </div>
+
     </div>
+</div>
 
 </body>
 </html>
